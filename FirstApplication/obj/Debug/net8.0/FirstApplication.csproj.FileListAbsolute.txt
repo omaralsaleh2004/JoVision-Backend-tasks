@@ -33,3 +33,4 @@ C:\Users\lenovo\source\repos\FirstApplication\FirstApplication\obj\Debug\net8.0\
 C:\Users\lenovo\source\repos\FirstApplication\FirstApplication\obj\Debug\net8.0\FirstApplication.pdb
 C:\Users\lenovo\source\repos\FirstApplication\FirstApplication\obj\Debug\net8.0\FirstApplication.genruntimeconfig.cache
 C:\Users\lenovo\source\repos\FirstApplication\FirstApplication\obj\Debug\net8.0\ref\FirstApplication.dll
+C:\Users\lenovo\source\repos\FirstApplication\FirstApplication\obj\Debug\net8.0\FirstApplication.sourcelink.json
