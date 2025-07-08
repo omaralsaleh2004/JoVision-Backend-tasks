@@ -31,6 +31,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FirstApplication.Controllers.BirthDateFormDataController",
+    "Method": "GetAge",
+    "RelativePath": "BirthDateFormData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "FirstApplication.Models.BirthDatePostRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FirstApplication.Controllers.GreeterController",
     "Method": "GetGreeting",
     "RelativePath": "Greeter",

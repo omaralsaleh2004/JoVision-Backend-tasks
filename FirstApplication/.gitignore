@@ -7,4 +7,5 @@ FirstApplication/obj/
 
 # User-specific files
 *.user
-*.suo
+*.suoS
+* text=auto

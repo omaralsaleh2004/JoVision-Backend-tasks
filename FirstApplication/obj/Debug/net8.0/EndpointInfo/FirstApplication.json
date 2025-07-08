@@ -50,6 +50,37 @@
         }
       }
     },
+    "/BirthDateFormData": {
+      "post": {
+        "tags": [
+          "BirthDateFormData"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BirthDatePostRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BirthDatePostRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BirthDatePostRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/Greeter": {
       "get": {
         "tags": [
@@ -130,6 +161,31 @@
   },
   "components": {
     "schemas": {
+      "BirthDatePostRequest": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "years": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "months": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "days": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "WeatherForecast": {
         "type": "object",
         "properties": {
