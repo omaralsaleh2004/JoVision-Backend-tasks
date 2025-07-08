@@ -35,6 +35,4 @@ C:\Users\lenovo\source\repos\FirstApplication\FirstApplication\obj\Debug\net8.0\
 C:\Users\lenovo\source\repos\FirstApplication\FirstApplication\obj\Debug\net8.0\ref\FirstApplication.dll
 C:\Users\lenovo\source\repos\FirstApplication\FirstApplication\obj\Debug\net8.0\FirstApplication.sourcelink.json
 C:\Users\lenovo\source\repos\FirstApplication\FirstApplication\bin\Debug\net8.0\FirstApplication.staticwebassets.runtime.json
-C:\Users\lenovo\source\repos\FirstApplication\FirstApplication\bin\Debug\net8.0\uploads\c212cf51-3bb5-41ff-b26f-0f10933a563e.json
-C:\Users\lenovo\source\repos\FirstApplication\FirstApplication\bin\Debug\net8.0\uploads\f340a8cd-2057-4945-9f42-7f2b9f1967fd.json
-C:\Users\lenovo\source\repos\FirstApplication\FirstApplication\bin\Debug\net8.0\uploads\ea323c4b-e010-418e-b4e5-e07e8b87f70b.json
+C:\Users\lenovo\source\repos\FirstApplication\FirstApplication\bin\Debug\net8.0\uploads\6e0a630b-e26d-4484-936b-a53111bf87c1.json

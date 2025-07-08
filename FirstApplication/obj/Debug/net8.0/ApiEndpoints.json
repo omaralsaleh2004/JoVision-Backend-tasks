@@ -47,6 +47,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FirstApplication.Controllers.CreateController",
+    "Method": "Post",
+    "RelativePath": "Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "File",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FirstApplication.Controllers.DeleteController",
     "Method": "DeleteFile",
     "RelativePath": "Delete",
@@ -94,20 +115,25 @@
     ]
   },
   {
-    "ContainingType": "FirstApplication.Controllers.UploadController",
-    "Method": "Post",
-    "RelativePath": "Upload",
-    "HttpMethod": "POST",
+    "ContainingType": "FirstApplication.Controllers.UpdateController",
+    "Method": "UpdateMetadata",
+    "RelativePath": "Update",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "File",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "Name": "fileName",
+        "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "Name",
+        "Name": "fileOwner",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "newOwner",
         "Type": "System.String",
         "IsRequired": false
       }

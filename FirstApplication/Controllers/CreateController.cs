@@ -5,7 +5,7 @@ namespace FirstApplication.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class UploadController : ControllerBase
+    public class CreateController : ControllerBase
     {
         public class Upload
         {
