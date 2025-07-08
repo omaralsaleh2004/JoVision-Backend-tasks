@@ -47,6 +47,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FirstApplication.Controllers.DeleteController",
+    "Method": "DeleteFile",
+    "RelativePath": "Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fileOwner",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FirstApplication.Controllers.GreeterController",
     "Method": "GetGreeting",
     "RelativePath": "Greeter",
@@ -71,6 +92,27 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "FirstApplication.Controllers.UploadController",
+    "Method": "Post",
+    "RelativePath": "Upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "File",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "FirstApplication.Controllers.WeatherForecastController",

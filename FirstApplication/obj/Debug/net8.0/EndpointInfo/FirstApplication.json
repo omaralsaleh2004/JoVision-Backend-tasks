@@ -81,6 +81,34 @@
         }
       }
     },
+    "/Delete": {
+      "delete": {
+        "tags": [
+          "Delete"
+        ],
+        "parameters": [
+          {
+            "name": "fileName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fileOwner",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/Greeter": {
       "get": {
         "tags": [
@@ -115,6 +143,44 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/Upload": {
+      "post": {
+        "tags": [
+          "Upload"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "File": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "Name": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "File": {
+                  "style": "form"
+                },
+                "Name": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
