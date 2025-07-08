@@ -16,7 +16,7 @@ namespace FirstApplication.Controllers
 
         private readonly string uploadPath = Path.Combine(Directory.GetCurrentDirectory(), "uploads");
 
-        [HttpPut] // Change to PUT since it's an update operation
+        [HttpPut] 
         public IActionResult UpdateMetadata(
             [FromQuery] string? fileName,
             [FromQuery] string? fileOwner,
@@ -42,11 +42,10 @@ namespace FirstApplication.Controllers
                 if (!string.Equals(metadata.Name, fileOwner, StringComparison.OrdinalIgnoreCase))
                     return Forbid("You are not authorized to update this file.");
 
-                // ✅ Update only the name and LastModifiedAt
                 metadata.Name = newOwner;
                 metadata.LastModifiedAt = DateTime.UtcNow;
 
-                // ✅ Save the updated metadata
+               
                 var updatedJson = JsonSerializer.Serialize(metadata, new JsonSerializerOptions { WriteIndented = true });
                 System.IO.File.WriteAllText(metadataPath, updatedJson);
 

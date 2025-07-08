@@ -21,7 +21,7 @@ namespace FirstApplication.Controllers
         {
             try
             {
-                // Validate parameters
+             
                 if (string.IsNullOrWhiteSpace(fileName) || string.IsNullOrWhiteSpace(fileOwner))
                 {
                     return BadRequest("File name and owner are required.");
@@ -30,13 +30,13 @@ namespace FirstApplication.Controllers
                 var imagePath = Path.Combine(uploadPath, fileName);
                 var metadataPath = Path.Combine(uploadPath, Path.GetFileNameWithoutExtension(fileName) + ".json");
 
-                // Check if files exist
+               
                 if (!System.IO.File.Exists(imagePath) || !System.IO.File.Exists(metadataPath))
                 {
                     return BadRequest("File or metadata not found.");
                 }
 
-                // Read and deserialize metadata
+                
                 var metadataJson = System.IO.File.ReadAllText(metadataPath);
                 var metadata = JsonSerializer.Deserialize<ImageMetadata>(metadataJson);
                 Console.WriteLine($"Looking for image at: {imagePath}");
@@ -48,15 +48,19 @@ namespace FirstApplication.Controllers
                     return StatusCode(500, "Metadata corrupted or unreadable.");
                 }
 
-                // Check ownership
+              
                 if (!string.Equals(metadata.Name, fileOwner, StringComparison.OrdinalIgnoreCase))
                 {
                     return Forbid("You are not authorized to delete this file.");
                 }
 
-                // Delete files
+                Console.WriteLine(imagePath);
+                Console.WriteLine(imagePath);
+
                 System.IO.File.Delete(imagePath);
                 System.IO.File.Delete(metadataPath);
+               
+
 
                 return Ok("File and metadata deleted successfully.");
             }
