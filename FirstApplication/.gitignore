@@ -1,0 +1,10 @@
+.vs/
+
+# Ignore build folders
+FirstApplication/bin/
+FirstApplication/obj/
+
+
+# User-specific files
+*.user
+*.suo
