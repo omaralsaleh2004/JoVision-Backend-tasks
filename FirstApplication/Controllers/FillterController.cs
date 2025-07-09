@@ -103,7 +103,7 @@ public class FilterController : ControllerBase
                     return BadRequest("Invalid FilterType.");
             }
 
-            var filtered = results.Select(r => new { r.FileName, r.Owner }).ToList();
+            var filtered = results.Select(r => new { r.FileName, r.Owner });
             return Ok(filtered);
         }
         catch (Exception ex)
