@@ -115,6 +115,27 @@
     ]
   },
   {
+    "ContainingType": "FirstApplication.Controllers.RetrieveController",
+    "Method": "UpdateMetadata",
+    "RelativePath": "Retrieve",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fileOwner",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FirstApplication.Controllers.UpdateController",
     "Method": "UpdateMetadata",
     "RelativePath": "Update",

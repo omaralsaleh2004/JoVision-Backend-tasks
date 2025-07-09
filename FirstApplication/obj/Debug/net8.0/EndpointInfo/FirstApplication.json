@@ -185,6 +185,34 @@
         }
       }
     },
+    "/Retrieve": {
+      "get": {
+        "tags": [
+          "Retrieve"
+        ],
+        "parameters": [
+          {
+            "name": "fileName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fileOwner",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/Update": {
       "put": {
         "tags": [
