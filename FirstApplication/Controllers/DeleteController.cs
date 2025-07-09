@@ -51,7 +51,7 @@ namespace FirstApplication.Controllers
               
                 if (!string.Equals(metadata.Name, fileOwner, StringComparison.OrdinalIgnoreCase))
                 {
-                    return Forbid("You are not authorized to delete this file.");
+                    return BadRequest("You are not authorized to delete this file.");
                 }
 
                 Console.WriteLine(imagePath);
