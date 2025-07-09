@@ -147,6 +147,57 @@
         }
       }
     },
+    "/Filter": {
+      "post": {
+        "tags": [
+          "Filter"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "CreationDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "ModificationDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "Owner": {
+                    "type": "string"
+                  },
+                  "FilterType": {
+                    "$ref": "#/components/schemas/FilterType"
+                  }
+                }
+              },
+              "encoding": {
+                "CreationDate": {
+                  "style": "form"
+                },
+                "ModificationDate": {
+                  "style": "form"
+                },
+                "Owner": {
+                  "style": "form"
+                },
+                "FilterType": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/Greeter": {
       "get": {
         "tags": [
@@ -200,6 +251,34 @@
           },
           {
             "name": "fileOwner",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/TransferOwnership": {
+      "get": {
+        "tags": [
+          "TransferOwnership"
+        ],
+        "parameters": [
+          {
+            "name": "oldOwner",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "newOwner",
             "in": "query",
             "schema": {
               "type": "string"
@@ -314,6 +393,16 @@
           }
         },
         "additionalProperties": false
+      },
+      "FilterType": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
       },
       "WeatherForecast": {
         "type": "object",
